@@ -1,5 +1,6 @@
 package com.selphirlette.tutorialmod;
 
+import com.selphirlette.tutorialmod.block.ModBlocks;
 import com.selphirlette.tutorialmod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -33,6 +34,7 @@ public class TutorialMod
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in
