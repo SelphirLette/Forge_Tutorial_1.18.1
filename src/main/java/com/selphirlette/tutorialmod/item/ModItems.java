@@ -15,10 +15,19 @@ public class ModItems
 
     // Item register names must be lowercase, no spaces, and unique.
     public static final RegistryObject<Item> CITRINE = ITEMS.register("citrine",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MOD_TAB)));
 
     public static final RegistryObject<Item> RAW_CITRINE = ITEMS.register("raw_citrine",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MOD_TAB)));
+
+    public static final RegistryObject<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MOD_TAB)));
+
+    public static final RegistryObject<Item> COBALT_NUGGET = ITEMS.register("cobalt_nugget",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MOD_TAB)));
+
+    public static final RegistryObject<Item> RAW_COBALT = ITEMS.register("raw_cobalt",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MOD_TAB)));
 
     public static void register(IEventBus eventBus)
     {

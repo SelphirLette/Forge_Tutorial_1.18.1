@@ -1,6 +1,7 @@
 package com.selphirlette.tutorialmod.block;
 
 import com.selphirlette.tutorialmod.TutorialMod;
+import com.selphirlette.tutorialmod.item.ModCreativeModeTab;
 import com.selphirlette.tutorialmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,13 +22,19 @@ public class ModBlocks
             DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<Block> CITRINE_BLOCK = registerBlock("citrine_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(9f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.MOD_TAB);
 
     public static final RegistryObject<Block> RAW_CITRINE_BLOCK = registerBlock("raw_citrine_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(7f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(7f).requiresCorrectToolForDrops()), ModCreativeModeTab.MOD_TAB);
 
     public static final RegistryObject<Block> CITRINE_ORE = registerBlock("citrine_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.MOD_TAB);
+
+    public static final RegistryObject<Block> COBALT_BLOCK = registerBlock("cobalt_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.MOD_TAB);
+
+    public static final RegistryObject<Block> COBALT_ORE = registerBlock("cobalt_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.MOD_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name,
         Supplier<T> block,

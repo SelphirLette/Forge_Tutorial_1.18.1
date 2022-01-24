@@ -1,8 +1,15 @@
 {
   "item.tutorialmod.citrine": "Citrine",
   "item.tutorialmod.raw_citrine": "Raw Citrine",
+  "item.tutorialmod.cobalt_ingot": "Cobalt Ingot",
+  "item.tutorialmod.cobalt_nugget": "Cobalt Nugget",
+  "item.tutorialmod.raw_cobalt": "Raw Cobalt",
 
   "block.tutorialmod.citrine_block": "Block of Citrine",
   "block.tutorialmod.raw_citrine_block": "Block of Raw Citrine",
-  "block.tutorialmod.citrine_ore": "Citrine Ore"
+  "block.tutorialmod.citrine_ore": "Citrine Ore",
+  "block.tutorialmod.cobalt_block": "Block of Cobalt",
+  "block.tutorialmod.cobalt_ore": "Cobalt Ore",
+
+  "itemGroup.modtab": "Mod Tab"
 }
