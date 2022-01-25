@@ -9,7 +9,9 @@
   "block.tutorialmod.raw_citrine_block": "Block of Raw Citrine",
   "block.tutorialmod.citrine_ore": "Citrine Ore",
   "block.tutorialmod.cobalt_block": "Block of Cobalt",
+  "block.tutorialmod.raw_cobalt_block": "Block of Raw Cobalt",
   "block.tutorialmod.cobalt_ore": "Cobalt Ore",
+  "block.tutorialmod.deepslate_cobalt_ore": "Deepslate Cobalt Ore",
 
   "itemGroup.modtab": "Mod Tab"
 }
