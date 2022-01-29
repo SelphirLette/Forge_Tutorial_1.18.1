@@ -58,6 +58,10 @@ minecraft {
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
 
+            // Turn off mixin in dev environment for Create Mod
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+
             mods {
                 tutorialmod {
                     source sourceSets.main
@@ -125,6 +129,21 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+
+    maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+    maven {
+        // location of the maven that hosts The One Probe files
+        url "https://cursemaven.com"
+        }
 }
 
 dependencies {
@@ -137,6 +156,21 @@ dependencies {
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
     // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
+
+    // compile against the JEI API but do not include it at runtime
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
+    // at runtime, use the full JEI jar
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+    // use The One Probe jar        cursemaven -> project id : file id (url)
+    implementation fg.deobf("curse.maven:the-one-probe-245211:3550084")
+    //Flywheel for Create mod
+    implementation fg.deobf("curse.maven:flywheel-486392:3623314")
+    // Create mod
+    implementation fg.deobf("curse.maven:create-328085:3623348")
+    // CraftTweaker to edit Create recipes
+    implementation fg.deobf("curse.maven:CraftTweaker-forge-239197:3625952")
+    // Magnesium need to edit version to work for 1.18.1
+    //implementation fg.deobf("curse.maven:magnesium-532724:3556734")
 
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")

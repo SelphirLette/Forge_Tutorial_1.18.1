@@ -4,6 +4,9 @@
   "item.tutorialmod.cobalt_ingot": "Cobalt Ingot",
   "item.tutorialmod.cobalt_nugget": "Cobalt Nugget",
   "item.tutorialmod.raw_cobalt": "Raw Cobalt",
+  "item.tutorialmod.rifle": "Rifle",
+  "item.tutorialmod.algal_blend": "Algal Blend",
+  "item.tutorialmod.dowsing_rod": "Dowsing Rod",
 
   "block.tutorialmod.citrine_block": "Block of Citrine",
   "block.tutorialmod.raw_citrine_block": "Block of Raw Citrine",
@@ -13,5 +16,7 @@
   "block.tutorialmod.cobalt_ore": "Cobalt Ore",
   "block.tutorialmod.deepslate_cobalt_ore": "Deepslate Cobalt Ore",
 
-  "itemGroup.modtab": "Mod Tab"
+  "itemGroup.modtab": "Mod Tab",
+
+  "item.tutorialmod.dowsing_rod.no_valuables": "No Valuable Blocks Found"
 }
